@@ -1,4 +1,4 @@
 study
 =====
 
-Study content
+Repositorio de conteudo de estudo.
