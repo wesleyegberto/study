@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="SpringMvcTest" basedir="." default="deploy">
+
+	<property name="project.name" value="SpringMvcTest" />
+
+	<property name="path.libs" value="WebContent/WEB-INF/lib" />
+	<property name="path.classes" value="WebContent/WEB-INF/classes" />
+
+	<property name="path.work" value="/opt/tomcat/work/Catalina/localhost" />
+	<property name="path.webapps" value="/opt/tomcat/webapps" />
+
+	<target name="limpar">
+		<delete dir="${path.work}" failonerror="false" />
+		<delete file="${path.webapps}/${project.adm}.war" failonerror="false" />
+		<delete dir="${path.webapps}/${project.adm}" failonerror="false" />
+		<delete file="${path.classes}/*" failonerror="false" />
+	</target>
+
+	<target name="war">
+		<!--<javac srcdir="src" destdir="build" classpath="${path.libs}/*;src/." />-->
+
+		<copy todir="${path.classes}">
+			<fileset dir="bin" includes="**/*.jsp, **/*.htm" />
+		</copy>
+
+		<jar jarfile="${project.name}.war" basedir="WebContent" />
+	</target>
+
+
+	<target name="deploy" depends="limpar,war">
+		<copy file="${project.name}.war" todir="${path.webapps}" />
+	</target>
+
+</project>

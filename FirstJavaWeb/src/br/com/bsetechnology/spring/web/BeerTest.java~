@@ -1,0 +1,32 @@
+package br.com.bsetechnology.spring.web;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.*;
+import java.util.*;
+import br.com.bsetechnology.spring.model.*;
+
+public class BeerTest extends HttpServlet {
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        /*response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        out.println("Beer Selection Advice<br/>");*/
+        String c = request.getParameter("color");
+        
+        //out.println("Got bee color " + c);
+        BeerExpert beerExp = new BeerExpert();
+        List<String> result = beerExp.getBrands(c);
+        
+        /*Iterator<String> it = result.iterator();
+        while(it.hasNext()) {
+            out.println("<br/> Try: " + it.next());
+        }*/
+        
+        request.setAttribute("styles", result);
+        
+        RequestDispatcher view = request.getRequestDispatcher("result.jsp");
+        
+    }
+    
+}
