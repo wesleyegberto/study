@@ -20,11 +20,6 @@
 		<param-value>/WEB-INF/faces-config.xml</param-value>
 	</context-param>
 	
-	<context-param>
-		<param-name>javax.faces.DEFAULT_SUFFIX</param-name>
-		<param-value>.xhtml</param-value>
-	</context-param>
-
 	<!-- Add Support for Spring -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -71,14 +66,15 @@
 		<servlet-name>FacesServlet</servlet-name>
 		<url-pattern>*.jsf</url-pattern>
 	</servlet-mapping>
-
+	
 	<servlet-mapping>
 		<servlet-name>FacesServlet</servlet-name>
 		<url-pattern>*.faces</url-pattern>
 	</servlet-mapping>
-
+	
 
 	<welcome-file-list>
 		<welcome-file>index.xhtml</welcome-file>
 	</welcome-file-list>
+	
 </web-app>
