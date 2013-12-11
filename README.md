@@ -1,4 +1,4 @@
-study
+Estudo
 =====
 
-Repositorio de conteudo de estudo.
+Repositorio para conteudo de estudo.
