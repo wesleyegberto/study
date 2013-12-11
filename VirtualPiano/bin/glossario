@@ -1,0 +1,32 @@
+	Glossário
+
+
+.Message
+	-informa o que fazer
+
+.Enum Channel
+	-contém as constantes para os canais
+
+.MidiEvent
+	-contém a parte do evento que informa o que fazer (Message) e quando fazer
+
+.Sequencer
+	-reproduz os MIDI, enviando para os instrumentos certos
+	-faz outras coisas
+
+.Sequence
+	-contém as track
+
+.Track
+	-funcionar como uma faixa que contém todos os Midi
+	
+.Nota
+	-Canal 1
+	21 à 104: Teclado
+	105 à 127: Teclado fino
+	
+	-Canal 9
+	71: Apito curto
+	72: Apito longo e fino
+	78: Cuica
+	79: Cuica grave

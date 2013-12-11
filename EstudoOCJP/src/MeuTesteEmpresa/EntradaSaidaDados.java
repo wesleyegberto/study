@@ -1,0 +1,1 @@
+package MeuTesteEmpresa;import java.util.Scanner;public class EntradaSaidaDados {	Scanner scn = new Scanner(System.in);	public String entrada(String msg) {		System.out.print(msg);		return scn.nextLine();	}}
