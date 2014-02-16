@@ -28,7 +28,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://localhost:3306/Estudo" />
 		<property name="username" value="root" />
-		<property name="password" value="1234abc@" />
+		<property name="password" value="" />
 	</bean>
 	 
 	<bean id="tarefaDAO" class="br.com.caelum.dao.JdbcTarefaDao">
