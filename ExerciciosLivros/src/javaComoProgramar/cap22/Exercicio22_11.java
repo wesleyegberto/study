@@ -1,7 +1,9 @@
 package javaComoProgramar.cap22;
 
-public class Exercicio22_11 {
-	public static void main(String[] args) {
+public class Exercicio22_11
+{
+	public static void main(String[] args)
+	{
 		List<Character> list = new List<Character>();
 		String text = javax.swing.JOptionPane.showInputDialog("Entre com uma frase:");
 		char[] letras = text.toCharArray();
@@ -9,8 +11,10 @@ public class Exercicio22_11 {
 		boolean isPalindromo = true;
 		int tamanho = 0;
 
-		for(int i = 0; i < letras.length; i++) {
-			if(Character.isLetterOrDigit(letras[i])) {
+		for(int i = 0; i < letras.length; i++)
+		{
+			if(Character.isLetterOrDigit(letras[i]))
+			{
 				list.insertAtBack(Character.toLowerCase(letras[i]));
 				tamanho++;
 			}
@@ -22,7 +26,8 @@ public class Exercicio22_11 {
 			medio = (tamanho - 1) / 2;
 
 		for(int i = 0; i < medio; i++)
-			if(!list.removeFromFront().equals(list.removeFromBack())) {
+			if(!list.removeFromFront().equals(list.removeFromBack()))
+			{
 				isPalindromo = false;
 			}
 

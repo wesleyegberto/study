@@ -1,61 +1,83 @@
+
 package javaComoProgramar.cap22;
 
-public class SortedList<T extends Comparable<T>> {
+public class SortedList<T extends Comparable<T>>
+{
 	private ListNode<T> firstNode;
 	private ListNode<T> lastNode;
 	private String name;
 
-	public SortedList() {
+	public SortedList()
+	{
 		this("SortedList");
 	}
 
-	public SortedList(String listName) {
+	public SortedList(String listName)
+	{
 		name = listName;
 		firstNode = lastNode = null;
 	}
 
-	public void insert(T insertItem) {
-		ListNode<T> newPos = new ListNode<T>(insertItem);
-
+	public void insert(T insertItem)
+	{
+ 		ListNode<T> newPos =  new ListNode<T>(insertItem);
+		
 		if(isEmpty())
 			firstNode = lastNode = new ListNode<T>(insertItem);
-		else if(firstNode == lastNode) {
-			if(firstNode.data.compareTo(insertItem) > 0) {
+		else if(firstNode == lastNode)
+		{
+			if(firstNode.data.compareTo(insertItem) > 0)
+			{
 				newPos.nextNode = firstNode;
 				firstNode = newPos;
-			} else {
-				firstNode.nextNode = lastNode = newPos;
 			}
-		} else {
+			else
+			{
+				firstNode.nextNode = lastNode = newPos;				
+			}
+		}
+		else
+		{
 			ListNode<T> pos = firstNode;
 			ListNode<T> ant = firstNode;
-
-			while(pos != null) {
-				if(pos == lastNode) {
-					if(pos.data.compareTo(insertItem) > 0) {
+			
+			while(pos != null)
+			{
+				if(pos == lastNode)
+				{
+					if(pos.data.compareTo(insertItem) > 0)
+					{
 						newPos.nextNode = pos;
 						ant.nextNode = newPos;
-					} else {
+					}
+					else
+					{
 						pos.nextNode = lastNode = newPos;
 					}
 					return;
-				} else if(pos.data.compareTo(insertItem) >= 0) {
-					if(pos == firstNode) {
+				}
+				else if(pos.data.compareTo(insertItem) >= 0)
+				{
+					if(pos == firstNode)
+					{
 						newPos.nextNode = pos;
 						firstNode = newPos;
-					} else {
+					}
+					else
+					{
 						newPos.nextNode = pos;
 						ant.nextNode = newPos;
 					}
 					return;
-				}
+				}				
 				ant = pos;
 				pos = pos.nextNode;
 			}
 		}
 	}
 
-	public T removeFromFront() throws EmptyListException {
+	public T removeFromFront() throws EmptyListException
+	{
 		if(isEmpty())
 			throw new EmptyListException(name);
 
@@ -69,7 +91,8 @@ public class SortedList<T extends Comparable<T>> {
 		return removedItem;
 	}
 
-	public T removeFromBack() throws EmptyListException {
+	public T removeFromBack() throws EmptyListException
+	{
 		if(isEmpty())
 			throw new EmptyListException(name);
 
@@ -77,7 +100,8 @@ public class SortedList<T extends Comparable<T>> {
 
 		if(firstNode == lastNode)
 			firstNode = lastNode = null;
-		else {
+		else
+		{
 			ListNode<T> current = firstNode;
 
 			while(current.nextNode != lastNode)
@@ -89,18 +113,22 @@ public class SortedList<T extends Comparable<T>> {
 
 		return removedItem;
 	}
-
-	public void merge(SortedList<T> orig) {
+	
+	public void merge(SortedList<T> orig)
+	{
 		while(!orig.isEmpty())
 			insert(orig.removeFromFront());
 	}
 
-	public boolean isEmpty() {
+	public boolean isEmpty()
+	{
 		return firstNode == null;
 	}
 
-	public void print() {
-		if(isEmpty()) {
+	public void print()
+	{
+		if(isEmpty())
+		{
 			System.out.printf("Empty %s\n", name);
 			return;
 		}
@@ -108,7 +136,8 @@ public class SortedList<T extends Comparable<T>> {
 		System.out.printf("The %s is: ", name);
 		ListNode<T> current = firstNode;
 
-		while(current != null) {
+		while(current != null)
+		{
 			System.out.printf("%s ", current.data);
 			current = current.nextNode;
 		}

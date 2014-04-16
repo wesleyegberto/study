@@ -1,49 +1,58 @@
 package javaComoProgramar.cap22;
 
-class ListNode<T> {
+class ListNode<T>
+{
 	T data;
 	ListNode<T> nextNode;
 
 	// constructor creates a ListNode that refers to object
-	ListNode(T object) {
+	ListNode(T object)
+	{
 		this(object, null);
 	} // end ListNode one-argument constructor
-
-	ListNode(T object, ListNode<T> node) {
+	
+	ListNode(T object, ListNode<T> node)
+	{
 		data = object;
 		nextNode = node;
 	} // end ListNode two-argument constructor
 
 	// return reference to data in node
-	T getData() {
+	T getData()
+	{
 		return data; // return item in this node
 	} // end method getData
 
 	// return reference to next node in list
-	ListNode<T> getNext() {
+	ListNode<T> getNext()
+	{
 		return nextNode; // get next node
 	} // end method getNext
 } // end class ListNode< T >
 
 // class List definition
-public class List<T> {
+public class List<T>
+{
 	private ListNode<T> firstNode;
 	private ListNode<T> lastNode;
 	private String name; // string like "list" used in printing
 
 	// constructor creates empty List with "list" as the name
-	public List() {
+	public List()
+	{
 		this("list");
 	} // end List no-argument constructor
 
 	// constructor creates an empty List with a name
-	public List(String listName) {
+	public List(String listName)
+	{
 		name = listName;
 		firstNode = lastNode = null;
 	} // end List one-argument constructor
 
 	// insert item at front of List
-	public void insertAtFront(T insertItem) {
+	public void insertAtFront(T insertItem)
+	{
 		if(isEmpty()) // firstNode and lastNode refer to same object
 			firstNode = lastNode = new ListNode<T>(insertItem);
 		else
@@ -52,7 +61,8 @@ public class List<T> {
 	} // end method insertAtFront
 
 	// insert item at end of List
-	public void insertAtBack(T insertItem) {
+	public void insertAtBack(T insertItem)
+	{
 		if(isEmpty()) // firstNode and lastNode refer to same object
 			firstNode = lastNode = new ListNode<T>(insertItem);
 		else
@@ -61,7 +71,8 @@ public class List<T> {
 	} // end method insertAtBack
 
 	// remove first node from List
-	public T removeFromFront() throws EmptyListException {
+	public T removeFromFront() throws EmptyListException
+	{
 		if(isEmpty()) // throw exception if List is empty
 			throw new EmptyListException(name);
 
@@ -77,7 +88,8 @@ public class List<T> {
 	} // end method removeFromFront
 
 	// remove last node from List
-	public T removeFromBack() throws EmptyListException {
+	public T removeFromBack() throws EmptyListException
+	{
 		if(isEmpty()) // throw exception if List is empty
 			throw new EmptyListException(name);
 
@@ -102,11 +114,13 @@ public class List<T> {
 		return removedItem; // return removed node data
 	} // end method removeFromBack
 
-	public T search(T key) {
+	public T search(T key)
+	{
 		return search(key, firstNode);
 	}
-
-	private T search(T key, ListNode<T> node) {
+	
+	private T search(T key, ListNode<T> node)
+	{
 		T value = null;
 		if(key.equals(node.data))
 			value = node.data;
@@ -115,13 +129,15 @@ public class List<T> {
 
 		return value;
 	}
-
+	
 	// determine whether list is empty
-	public boolean isEmpty() {
+	public boolean isEmpty()
+	{
 		return firstNode == null; // return true if list is empty
 	} // end method isEmpty
 
-	public static <T> List<T> reverse(List<T> list) {
+	public static <T> List<T> reverse(List<T> list)
+	{
 		List<T> listReverse = new List<T>();
 
 		while(!list.isEmpty())
@@ -131,8 +147,10 @@ public class List<T> {
 	}
 
 	// output list contents
-	public void print() {
-		if(isEmpty()) {
+	public void print()
+	{
+		if(isEmpty())
+		{
 			System.out.printf("Empty %s\n", name);
 			return;
 		} // end if
@@ -141,7 +159,8 @@ public class List<T> {
 		ListNode<T> current = firstNode;
 
 		// while not at end of list, output current node's data
-		while(current != null) {
+		while(current != null)
+		{
 			System.out.printf("%s ", current.data);
 			current = current.nextNode;
 		} // end while
@@ -149,8 +168,10 @@ public class List<T> {
 		System.out.println();
 	} // end method print
 
-	public void printListBackward() {
-		if(isEmpty()) {
+	public void printListBackward()
+	{
+		if(isEmpty())
+		{
 			System.out.printf("Empty %s\n", name);
 			return;
 		} // end if
@@ -158,12 +179,13 @@ public class List<T> {
 		System.out.printf("The %s in backward is: ", name);
 		ListNode<T> current = firstNode;
 		String listBackward = "";
-
-		while(current != null) {
+		
+		while(current != null)
+		{
 			listBackward = current.data + " " + listBackward;
 			current = current.nextNode;
 		}
-
+		
 		System.out.print(listBackward);
 		System.out.println();
 	}

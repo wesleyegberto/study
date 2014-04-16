@@ -8,8 +8,10 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.Scanner;
 
-public class Exercicio20_14 {
-	public static void main(String[] args) {
+public class Exercicio20_14
+{
+	public static void main(String[] args)
+	{
 		// create HashMap to store String keys and Integer values
 		Map<String, Integer> myMap = new HashMap<String, Integer>();
 
@@ -18,7 +20,8 @@ public class Exercicio20_14 {
 	} // end main
 
 	// create map from user input
-	private static void createMap(Map<String, Integer> map) {
+	private static void createMap(Map<String, Integer> map)
+	{
 		Scanner scanner = new Scanner(System.in); // create scanner
 		System.out.println("Enter a string:"); // prompt for user input
 		String input = scanner.nextLine();
@@ -27,11 +30,12 @@ public class Exercicio20_14 {
 		String[] tokens = input.split("");
 
 		// processing input text
-		for(String token : tokens) {
+		for (String token : tokens)
+		{
 			String word = token.toLowerCase(); // get lowercase word
 
 			// if the map contains the word
-			if(map.containsKey(word)) // is word in map
+			if (map.containsKey(word)) // is word in map
 			{
 				int count = map.get(word); // get current count
 				map.put(word, count + 1); // increment count
@@ -42,7 +46,8 @@ public class Exercicio20_14 {
 	} // end method createMap
 
 	// display map content
-	private static void displayMap(Map<String, Integer> map) {
+	private static void displayMap(Map<String, Integer> map)
+	{
 		Set<String> keys = map.keySet(); // get keys
 
 		// sort keys
@@ -51,7 +56,7 @@ public class Exercicio20_14 {
 		System.out.println("\nMap contains:\nKey\t\tValue");
 
 		// generate output for each key in map
-		for(String key : sortedKeys)
+		for (String key : sortedKeys)
 			System.out.printf("%-10s%10s\n", key, map.get(key));
 
 		System.out.printf("\nsize: %d\nisEmpty: %b\n", map.size(), map.isEmpty());
