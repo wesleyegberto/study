@@ -1,0 +1,20 @@
+<!-- Grupo -->
+<!-- Armazenar� todos os grupos do sistemas e a extens�o ser� GRP-->
+<GRUPO>
+	<ID>1</ID>
+	<NOME>Family</NOME>
+	<CONTATOS>
+		<ID>2</ID>
+		<ID>4</ID>
+	</CONTATOS>
+</GRUPO>
+
+<GRUPO>
+	<ID>2</ID>
+	<NOME>Work</NOME>
+	<CONTATOS>
+		<ID>2</ID>
+		<ID>3</ID>
+	</CONTATOS>
+</GRUPO>
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>100</x>
+      <y>130</y>
+      <w>680</w>
+      <h>530</h>
+    </coordinates>
+    <panel_attributes>Requisitos Funcionais
+--
+-Compromisso
+	.gerência
+    .data(s)
+    .hora(s)
+    .contato(s) ou grupo(s)
+    .forma de alerta(Email, SMS e Animação)
+ 
+-Despertador
+    .data(s)
+    .hora(s)
+    .música
+    .quant. de repetição
+ 
+-Contato
+    .gerência
+ 
+-Fast Notes
+    .Gerência
+   </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

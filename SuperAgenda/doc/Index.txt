@@ -1,0 +1,21 @@
+Arquivo Pesquisa do Compromisso
+<ID>|<TITULO>|<TIPO>|<DATAS>|<HORAS>|<CONTATOS>|<GRUPOS>
+
+
+
+Arquivo Pesquisa do Contato
+<ID>|<NOME>|<APELIDO>
+
+<ID>|<TELEFONE>
+
+<ID>|<EMAIL>
+
+<ID>|<CELULAR>
+
+
+Arquivo Pesquisa do Grupo
+<ID>|<NOME>|<CONTATO>
+
+
+Arquivo Pesquisa do Despertador
+

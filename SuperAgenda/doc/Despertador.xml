@@ -1,0 +1,17 @@
+<!-- O nome do arquivo será o ID e a extensão será DSP -->
+<DESPERTADOR>
+	<ID>1</ID>
+	<TITULO>Trabalho</TITULO>
+	
+	<NUM_TOQUE>2</NUM_TOQUE><!-- Quantidade de repetição -->
+	<INTERVALO>3</INTERVALO><!-- O intervalo de tempo entre os toques (em minutos) -->
+	
+	<musica>
+		<CAMINHO>C:/text.mp3</CAMINHO>
+		<VOLUME>15</VOLUME>
+		<INICIO>1:20</INICIO>
+		<FIM>1:50</FIM>
+	</musica>
+	
+</DESPERTADOR>
+

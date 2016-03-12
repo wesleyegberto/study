@@ -1,0 +1,11 @@
+<!-- Arquivo responsável pelo armazenamento dos meios de comunicação com Contato -->
+<!-- Nomeclatura: Comunication --->
+<!-- T para Telefone, E para Email, C[Operadora] para Celular, S para Skype, F para Facebook -->
+<!-- [Operadora] O to Oi, V to Vivo, T to Tim, N to Nextel, C to Claro -->
+
+1|T|071251141092202 <!-- Cod. Internacional + Cod. Regional + Numero -->
+2|T|1142121234
+3|CO|11967811234
+4|CN|193202|1167124212 <!-- Fleet Id + Cod. Regional + Numero -->
+5|E|wesleyegberto@yahoo.com.br
+

@@ -1,0 +1,54 @@
+<!-- O nome do arquivo ser� o ID e a extens�o ser� CMP -->
+<COMPROMISSO> <!-- Tag Root -->
+	<ID>1</ID>
+	<TITULO>Reuni�o</TITULO>
+	<ID_TIPO>1</ID_TIPO> <!-- Tipo de compromisso -->
+	<DATA_CRIACAO>10/05/2012</DATA_CRIACAO>
+	<DESCRICAO>Reuni�o.</DESCRICAO>
+	
+	<HORA>05:05</HORA> <!-- Hor�rio de Aviso -->
+	<HORA>15:00</HORA>
+	<HORA>20:00</HORA>
+	
+	<DATA>05/08/2012</DATA>
+	<DATA>09/08/2012</DATA>
+	
+	<AVISO_PC> <!-- Forma de Aviso -->
+		<MUSICA>
+			<CAMINHO>C:/text.mp3</CAMINHO>
+			<VOLUME>15</VOLUME>
+			<INICIO>1:20</INICIO>
+			<FIM>1:50</FIM>
+		</MUSICA>
+	</AVISO_PC>
+	
+	<AVISO_EMAIL>
+		<DESTINATARIO>wesley@yahoo.com</DESTINATARIO>
+		<DESTINATARIO>jonas@yahoo.com</DESTINATARIO>
+		<DESTINATARIO>daves@yahoo.com</DESTINATARIO>
+		<EMAILS> <!-- Contatos que ser�o avisados -->
+			<ID>1|2</ID> <!-- O 1� � o ID do contato e o 2� � o ID da comunica��o -->
+			<ID>2|3</ID>
+			<ID>1|1</ID>
+		</EMAILS>
+		<GRUPOS> <!-- Grupos de contatos que ser�o avisados -->
+			<ID>1</ID>
+			<ID>5</ID>
+		</GRUPOS>
+	</AVISO_EMAIL>
+	
+	<AVISO_SMS>
+		<NUMERO>11961238525</NUMERO>
+		<NUMERO>11967891233</NUMERO>
+		<CELULARES> <!-- Contatos que ser�o avisados -->
+			<ID>1|1</ID> <!-- O 1� � o ID do contato e o 2� � o ID da comunica��o -->
+			<ID>2|3</ID>
+			<ID>1|4</ID>
+		</CELULARES>
+		<GRUPOS> <!-- Grupos de contatos que ser�o avisados -->
+			<ID>3</ID>
+			<ID>5</ID>
+		</GRUPOS>
+	</AVISO_SMS>
+</COMPROMISSO>
+

@@ -1,0 +1,18 @@
+<!-- O nome do arquivo será o ID e a extensão será CNT -->
+<CONTATO>
+	<NOME>Wesley</NOME>
+	<APELIDO>Macaco</APELIDO>
+	<S>M</S>
+	<DATA_NASC>30121993</DATA_NASC>
+	<ENDERECO>Rua Cristovao Colombo</ENDERECO>
+	<NUMERO>291</NUMERO>
+	<BAIRRO>Parque Imperial</BAIRRO>
+	<CIDADE>Barueri</CIDADE>
+	<UF>SP</UF>
+	<STATUS>A</STATUS>
+	
+	<GRUPO>13</GRUPO>
+	<GRUPO>3</GRUPO>
+</CONTATO>
+
+
